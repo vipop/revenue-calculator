@@ -1,0 +1,78 @@
+<!--
+////////// ////////// ////////// ////////// //////////
+
+Author:         Vlad Pop
+Email:          vipop94@gmail.com
+LinkedIn:       https://ca.linkedin.com/in/vlad-pop-8926b377
+
+Title:          Total Revenue Calculator
+Version:        1.0
+Purpose:        Parse JSON to retrieve information and display it
+                as desired.
+Description:    Retrieves all orders from a JSON file and lists them
+                with their corresponding total prices.
+                Also calculates the total revenue by adding the total order
+                prices(assuming they include shipping), then displays the
+                total revenue including and excluding tax(13% in Canada).
+Live Demo:      https://shop-test-web.000webhostapp.com/
+Note:           This HTML file must be placed on the same host as the JSON
+                file due to access permissions.
+                For the demo, the JSON file is located at
+                https://shop-test-web.000webhostapp.com/orders.json
+
+////////// ////////// ////////// ////////// //////////
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Total Revenue</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Revenue Calculator Script -->
+    <script src="parser.js"></script>
+</head>
+<body style="background-color: #7ab55c">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default center-block" style="padding: 5%; margin-top: 10%;">
+                    <div id="info" class="panel panel-success">
+                        <div class="panel-heading">Information</div>
+                        <div class="panel-body">
+<pre>
+    Author:         Vlad Pop
+    Email:          vipop94@gmail.com
+    LinkedIn:       https://ca.linkedin.com/in/vlad-pop-8926b377
+
+    Title:          Total Revenue Calculator
+    Version:        1.0
+    Purpose:        Parse JSON to retrieve information and display it
+                    as desired.
+    Description:    Retrieves all orders from a JSON file and lists them
+                    with their corresponding total prices.
+                    Also calculates the total revenue by adding the total order
+                    prices(assuming they include shipping), then displays the
+                    total revenue including and excluding tax(13% in Canada).
+                    
+    Live Demo:      https://shop-test-web.000webhostapp.com/
+    Note:           This HTML file must be placed on the same host as the JSON
+                    file due to access permissions.
+                    For the demo, the JSON file is located at
+                    https://shop-test-web.000webhostapp.com/orders.json
+</pre>
+                        </div>
+                    </div>
+                    <pre id="orderList"></pre>
+                    <p id="revenues" style="text-align: right;"><b id="totalRevenueBT"></b><br><b id="totalRevenue"></b></p>
+                    <button id="button" type="button" class="btn btn-success center-block" style="">Calculate Revenue</button><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
